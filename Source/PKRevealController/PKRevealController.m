@@ -1078,6 +1078,7 @@ typedef struct
         [container addSubview:childController.view];
 		if ([container isKindOfClass:[PKRevealControllerView class]]) {
 			((PKRevealControllerView *)container).viewController = childController;
+            [((PKRevealControllerView *)container) setUserInteractionForContainedViewEnabled:YES];
 		}
         [childController didMoveToParentViewController:self];
     }
